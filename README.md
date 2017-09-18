@@ -12,7 +12,12 @@ export PATH=$PATH:$GOPATH/bin
 ## Build and run the container (server)
 
 ```
-docker build -t grpc-play .
+make
+make run
+```
 
-docker run -it -p 8000:8000 -v $(pwd):/go/src/github.com/mtodd/grpc-play grpc-play
+## Build and run the client
+
+```
+go run client/main.go "Your Name"
 ```
