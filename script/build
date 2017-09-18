@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -ev
+
+go version
+
+go get -v -x ./...
+
+echo "ok"

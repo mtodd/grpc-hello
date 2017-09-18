@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package grpc_play_proto;
+
+service Hello {
+  // Generate generates a new key and initial key version.
+  rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message Error {
+  uint64 code = 1;
+}
+
+// GreetRequest is a request to generate a key.
+message GreetRequest {
+  string name = 1;
+}
+
+// GreetResponse is a response to a GreetRequest.
+message GreetResponse {
+  Error error = 1;
+  string message = 2;
+}
